@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { summarizeText } from './openai';
-// import Footer from './Footer';
 
 
 function App() {
   const [value, setValue] = useState(null);
   const [data, setData] = useState([null]);
   const [submitting, setSubmitting] = useState(false);
-  // const [isCopy, setIsCopy] = useState(false);
 
-  // const apiKey = "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";
+  // function to handle submit data(text to be summarized)
 
   const handlesubmit = async (e) => {
+    
+    // prevent empty submission
     e.preventDefault();
     setSubmitting(true);
 
@@ -54,7 +54,7 @@ function App() {
           <h1 className="text-3xl text-white text-center leading-10 font-semibold">
             Summarize Text with
             <br />
-            <span className="text-5xl font-bold text-cyan-500">Open AI</span>
+            <span className="text-5xl font-bold text-cyan-500">Text Summarizer</span>
           </h1>
           <p className="mt-5 text-lg text-gray-500 sm:text-xl text-center max-w-2xl">
             Simply paste your document and get a summary, ASAP!
